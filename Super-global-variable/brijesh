@@ -1,0 +1,88 @@
+<?php
+
+echo 'This is Brijesh terminal';
+echo PHP_EOL;
+echo 'The Brijesh Framework : Version 1.0';
+echo PHP_EOL;
+
+
+$commands=[
+'--help' => 'This is help Command',
+'--v' => '1.0',
+'--a' => 'for Addition',
+'--s' => 'for Subtraction', 
+'--m' => 'for Multiplication',
+'--d' => 'for Division',
+'--r' => 'for Remender'
+
+];
+echo PHP_EOL;
+foreach($commands as $key => $value){
+printf("%s\t :\t %s\n",$key,$value);
+}
+
+$output='';
+if(isset($argv[1]))
+{
+	$commands = $argv[1];
+	
+	echo "\e[H\e[J";
+	
+	switch($commands){
+	case '--v':
+		$output='1.x';
+		break;
+	
+	case '--a':
+		 echo '**Sum Of Two Number**';
+		 echo PHP_EOL;
+		 echo PHP_EOL;
+		 $x= readline('Enetr First Number :');
+		 $y= readline('Enetr Second Number :');
+		 $output = $x+$y;
+		break;
+		
+	case '--s':
+		 echo '**Subtraction Of Two Number**';
+		 echo PHP_EOL;
+		 echo PHP_EOL;
+		 $x= readline('Enetr First Number :');
+		 $y= readline('Enetr Second Number :');
+		 $output = $x-$y;
+		break;
+		
+	case '--m':
+		 echo '**Multiplication Of Two Number**';
+		 echo PHP_EOL;
+		 echo PHP_EOL;
+		 $x= readline('Enetr First Number :');
+		 $y= readline('Enetr Second Number :');
+		 $output = $x*$y;
+		break;
+		
+	case '--d':
+		 echo '**Division Of Two Number**';
+		 echo PHP_EOL;
+		 echo PHP_EOL;
+		 $x= readline('Enetr First Number :');
+		 $y= readline('Enetr Second Number :');
+		 $output = $x/$y;
+		break;
+		
+	case '--r':
+		 echo '** Remender **';
+		 echo PHP_EOL;
+		 echo PHP_EOL;
+		 $x= readline('Enetr First Number :');
+		 $y= readline('Enetr Second Number :');
+		 $output = $x%$y;
+		break;
+		
+	default:
+		$output='Invalid Command Supplied!!';
+	break;
+
+}
+}
+echo 'Result of ='.$output;
+?>

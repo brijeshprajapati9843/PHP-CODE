@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		#outer
+		{
+			height: 800px;
+			width: 100%;
+			background: #d5e7f0;
+			padding: 100px 200px;
+			box-sizing: border-box;
+		}
+		#inner
+		{
+			height: 100%;
+			width: 100%;
+			//background: #48da94;
+		}
+		.left
+		{
+			height: 100%;
+			width: 50%;
+			float: left;
+			font-size: 18px;
+		}
+		.right
+		{
+			height: 100%;
+			width: 50%;
+			float: left;
+			font-size: 18px;
+		}
+		#form-control
+		{
+			height: 30px;
+			width: 90%;
+			margin-bottom: 20px;
+			font-size: 15px;
+		}
+		.btn
+		{
+			height: 40px;
+			width: 150px;
+			border-radius: 5px;
+			border: none;
+			background: green;
+			color: white;
+			position: relative;
+			left: 50px;
+			top: 100px;
+		}
+		#btn-group
+		{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+<div id="outer">
+	<div id="inner">
+		<form action="control.php" method="post" name="frm" onsubmit="return data()">
+			<div class="left">
+				First Name <input type="text" name="fname" id="form-control" /><br/>
+				<p id="p1"></p>
+				Father Name<input type="text" name="fathername" id="form-control" /><br/>
+				<p id="p2"></p>
+				Course
+				<select name="course" id="form-control">
+					<option>-----Select course-----</option>
+					<option>B.TECH</option>
+					<option>M.TECH</option>
+					<option>DIPLOMA</option>
+					<option>D.PHARMA</option>
+					<option>B.COM</option>
+				</select><br/>
+				<p id="d"></p>
+				Pin code<input type="number" name="pin" id="form-control" onkeyup="data()" class="pincode" /><br/>
+				<p id="p3"></p>
+				State <br>
+				<select name="state" id="form-control" onchange="combo(this)">
+					<option>-----Select State-----</option>
+					<option>UTTER PRADESH</option>
+					<option>BIHAR</option>
+					<option>HARIYANA</option>
+					<option>ASSAM</option>
+					<option>MADHYA PRADESH</option>
+				</select> <br/>
+				Collage<input type="text" name="collage" id="form-control" /><br/>
+				<p id="p4"></p>
+				Password<input type="Password" name="pass" id="form-control" /><br/>
+				<p id="p5"></p>
+			</div>
+			<div class="right">
+				Last Name<input type="text" name="lname" id="form-control" /><br/>
+				<p id="last"></p>
+				Email Id<input type="email" name="email" id="form-control" /><br/>
+				<p id="email"></p>
+				Date of Birth<input type="date" name="dob" id="form-control" /><br/>
+				<p id="dob"></p>
+				Mobile no<input type="number" name="mob" id="form-control" onkeyup="data()" /><br/>
+				<p id="mob"></p>
+				City <br>
+				<select name="city" id="form-control" class="drop">
+					<!-- <option>-----Select City-----</option> -->
+					<!-- <option value="">Agra</option>
+					<option value="">Basti</option>
+					<option value="">Balrampur</option>
+					<option value="">Gonda</option>
+					<option value="">Sant Kabir Nagar</option> -->
+				</select><br/>
+				Passing Year<input type="number" name="pyear" id="form-control" /><br/>
+				<p id="pa"></p>
+				Conform Password<input type="Password" name="cpass" id="form-control" /><br/>
+				
+			</div>
+			<input type="submit" value="Submit" class="btn" id="btn-group1" />
+			<input type="reset" value="Reset" class="btn" id="btn-group" />
+		</form>
+	</div>
+</div>
+<script>
+	 
+
+	var data=()=>
+		{
+			var fn=document.forms['frm']['fname'].value
+			var f=document.querySelector("#p1")
+			if (fn.length<=2) {
+				f.innerText="Invalid First Name"
+				f.style.color="red";
+				document.forms['frm']['fname'].style.border="2px solid red"
+				return false;
+			}
+			var ln = document.forms['frm']['lname'].value 
+			var l=document.querySelector("#last")
+			if (ln.length<=2) {
+				l.innerText="Invalid Last Name"
+				l.style.color="red";
+				document.forms['frm']['lname'].style.border="2px solid red"
+				return false;
+			}
+			var faname = document.forms['frm']['fathername'].value 
+			var fa=document.querySelector("#p2")
+			if (faname.length<=2) {
+				fa.innerText="Invalid Father Name"
+				fa.style.color="red";
+				document.forms['frm']['fathername'].style.border="2px solid red"
+				return false;
+			}
+			var email = document.forms['frm']['email'].value 
+			var e=document.querySelector("#email")
+			if (email.length<=2) {
+				e.innerText="Invalid Email!!"
+				e.style.color="red";
+				document.forms['frm']['email'].style.border="2px solid red"
+				return false;
+			}
+
+			var course = document.forms['frm']['course'].value 
+			// var course = document.querySelector("select").value
+			var d=document.querySelector("#d")
+			if (course=="-----Select course-----") {
+				d.innerText="Please select any course !!"
+				d.style.color="red";
+				document.forms['frm']['course'].style.border="2px solid red"
+				return false;
+			}
+			var py= document.forms['frm']['pyear'].value 
+			var pa=document.querySelector("#pa")
+			if (py.length<4 || py.length>4) {
+				pa.innerText="Invalid Passing Year!!"
+				pa.style.color="red";
+				document.forms['frm']['pyear'].style.border="2px solid red"
+				return false;
+			}
+		// 	var mob_valid=()=>
+		// {
+			var mob = document.forms['frm']['mob'].value 
+			var m=document.querySelector("#mob")
+			if ((mob.charAt(0)==9 || mob.charAt(0)==8 || mob.charAt(0)==7 || mob.charAt(0)==6) && mob.length==10) {
+				m.innerText="Valid Mobile no!!"
+				m.style.color="green";
+				document.forms['frm']['mob'].style.border="2px solid green"
+			}
+			else
+			{
+				m.innerText="Invalid Mobile no!!"
+				m.style.color="red";
+				document.forms['frm']['mob'].style.border="2px solid red"
+				return false;
+			}
+		// }
+
+		// var pinvalid=()=>
+		// {
+
+			var a=document.forms['frm']['pin']
+			var v=a.value;
+			if (v.length==6) {
+				document.querySelector("#p3").innerText="Valid Pincode"
+				document.querySelector('#p3').style.color="green";
+			}
+			else
+			{
+				document.querySelector("#p3").innerText="Invalid Pincode"
+				document.querySelector('#p3').style.color="red";
+				return false;
+			}
+		// }
+			var pass= document.forms['frm']['pass'].value 
+			var cpass= document.forms['frm']['cpass'].value 
+			var p5=document.querySelector("#p5")
+			if (pass!=cpass) {
+				p5.innerText="Mismatch Password!!"
+				p5.style.color="red";
+				document.forms['frm']['pyear'].style.border="2px solid red"
+				return false;
+			}
+
+		}
+
+		
+		var up=["SANT KABIR NAGAR","GORKHPUR","KHUSHI NAGAR","MAHARAJGANG","BALRAMPUR"]
+	 	var bihar=["PATANA","SIWAN","CHHAPRA","AARA","Gaya","Bhagalpur","Muzaffarpur"]
+	 	var hr = ["Fridabad","Gurugram","Panipat","Ambala","Karnal"]
+	 	var mp = ["Indore","Bhopal","Jabalpur","Gwalior","Ujjain","Sagar","Rewa","Satna"]
+	 	var ass = ["Dibrugarg","Jorhat","Guwahati","Bongaigaon"]
+		var combo=(x)=>
+		{
+			if (x.value=="UTTER PRADESH") 
+			{
+				var res="<option>-----Select City-----</option>"
+				 for(var a of up) {
+					res=res+"<option>"+a+"</option>"
+				}
+				document.querySelector(".drop").innerHTML=res;
+			}
+			if (x.value=="MADHYA PRADESH") 
+			{
+				var res="<option>-----Select City-----</option>"
+				 for(var a of mp) {
+					res=res+"<option>"+a+"</option>"
+				}
+				document.querySelector(".drop").innerHTML=res;
+			}
+			if (x.value=="HARIYANA") 
+			{
+				var res="<option>-----Select City-----</option>"
+				 for(var a of hr) {
+					res=res+"<option>"+a+"</option>"
+				}
+				document.querySelector(".drop").innerHTML=res;
+			}
+			if (x.value=="ASSAM") 
+			{
+				var res="<option>-----Select City-----</option>"
+				 for(var a of ass) {
+					res=res+"<option>"+a+"</option>"
+				}
+				document.querySelector(".drop").innerHTML=res;
+			}
+			if (x.value=="BIHAR") 
+			{
+				var res="<option>-----Select City-----</option>"
+				 for(var a of bihar) {
+					res=res+"<option>"+a+"</option>"
+				}
+				document.querySelector(".drop").innerHTML=res;
+			}
+		}
+</script>
+</body>
+</html>

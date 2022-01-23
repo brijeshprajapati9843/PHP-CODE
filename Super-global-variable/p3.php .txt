@@ -1,0 +1,21 @@
+<?php
+
+// wap in php to check a array is Homohenous or Heterogenous
+
+function is_homo($array=[]){
+
+$key_type = getType($array[0]);
+for($i=0; $i<count($array); $i++){
+if($key_type === getType($array[$i])){
+
+}
+else
+{
+return false;
+}
+}
+return ture;
+}
+var_dump(is_homo([10,20,30,50,40]));
+
+?>
