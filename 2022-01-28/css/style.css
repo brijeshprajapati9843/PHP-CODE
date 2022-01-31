@@ -1,0 +1,105 @@
+*{ margin: 0; padding: 0; }
+
+
+.menubar
+{
+	background-color: black;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menubar ul
+{
+	list-style-type: none;
+
+}
+.menubar ul li
+{
+	text-align: center;
+	display: inline-flex;
+	margin-right: 40px;
+}
+.menubar ul li a
+{
+	text-decoration: none;
+	color: white;
+}
+.menubar ul li a:hover
+{
+	color: orangered;
+
+}
+.logo{ color: white; padding-left: 50px; }
+.banner
+{
+	height: 100vh;
+	width: 100%;
+	background-color: aquamarine;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+	box-sizing: border-box;
+} 
+.rightbanner
+{
+	height: 300px;
+	width: 500px;
+	/*background-color: rebeccapurple;*/
+	padding: 20px 50px;
+	box-sizing: border-box;
+	/*color: white;*/
+	font-size: 18px;
+
+}
+.rightbanner input
+{
+	height: 35px;
+	width: 100%;
+	margin-bottom: 30px;
+	font-size: 16px;
+}
+.btn
+{
+	background-color: orange;
+	border: none;
+	color: white;
+}
+.leftbanner
+{
+	height: 400px;
+	width: 500px;
+}
+.leftbanner h1
+{
+	font-size: 5rem;
+	text-align: center;
+}
+.row .col
+{
+	display: inline-flex;
+	margin-left: 35px;
+}
+.gallery h1
+{
+	text-align: center;
+	margin: 20px 0;
+}
+ 
+.services
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 30px;
+}
+.services .col{
+	height: 400px;
+	width: 500px;
+	background-color: skyblue;
+}
+.services .col h1,p
+{
+	margin: 10px;
+}

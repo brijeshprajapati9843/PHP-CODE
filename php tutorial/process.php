@@ -10,7 +10,7 @@ else {
 $serial = $_POST['serial'];
 $name = $_POST['name'];
 $roll = $_POST['roll'];
-$db_insert = "INSERT INTO student(Serial_no,st_name,st_roll)VALUES('$serial','$name','$roll')";
+$db_insert = "INSERT INTO student(Serial_no,st_name,st_roll) VALUES('$serial','$name','$roll')";
 $run = mysqli_query($conn,$db_insert);
 if ($run) {
   echo "Data INSERT";

@@ -1,0 +1,26 @@
+> show databases
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db
+test
+> use college
+switched to db college
+> db.createCollection("tbl_student")
+{ "ok" : 1 }
+> db
+college
+> show collections
+tbl_student
+> db.tbl_student.insert(
+... {roll:1001,name:"brijesh",marks:50}
+... )
+WriteResult({ "nInserted" : 1 })
+> db.tbl_student.find().pretty()
+{
+        "_id" : ObjectId("61ee2d2c50fccc7f724e29cd"),
+        "roll" : 1001,
+        "name" : "brijesh",
+        "marks" : 50
+}
+>
