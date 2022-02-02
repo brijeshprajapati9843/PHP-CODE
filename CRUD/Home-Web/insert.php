@@ -27,7 +27,7 @@ $sql = "select * from register";
 
 $result = mysqli_query($conn,$sql);
 echo "All Records \n"; 
- echo "<table border='1px' cellspacing='0px' cellpadding='10px' bgcolor='orange'>
+ echo "<table border='1px' cellspacing='0px' cellpadding='10px' bgcolor='orange' style='width:100%; text-align:center'>
 			<tr>
 				<th>Id</th>
 				<th>Name</th>
