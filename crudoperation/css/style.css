@@ -1,0 +1,37 @@
+.register{ 
+background: linear-gradient(135deg,#F7ACF1,#C4F78E);
+min-height: 500px;
+box-shadow: 0 0 10px 1px gray;
+}
+.register .btn
+{
+	background: #4DF791;
+	color: #fff;
+	font-weight: bolder;
+}
+.register h2
+{
+	color: #C4F78E;
+}
+.edit-btn:hover
+{
+	color: black !important;	
+}
+.form-control:focus{
+	background: linear-gradient(135deg,#C4F78E ,#F7ACF1) !important;
+}
+.login
+{
+	background: linear-gradient(135deg,#F7ACF1,#C4F78E);
+	min-height: 300px;
+	box-shadow: 0 0 10px 0px gray;
+	margin-top: 150px;
+}
+.login h2
+{
+	color: #8DFE29;
+}
+.msg
+{
+	text-transform: uppercase;
+}

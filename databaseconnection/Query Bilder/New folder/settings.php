@@ -7,7 +7,6 @@ define('HOST','localhost:3308');
 define('USER','root');
 define('PASSWORD','');
 define('DBNAME','app2022');
-define('BASE_URL','http://localhost:7000/');
 
 ################ All Constants ##########################
 

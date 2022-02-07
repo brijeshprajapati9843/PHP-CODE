@@ -6,8 +6,9 @@
 define('HOST','localhost:3308');
 define('USER','root');
 define('PASSWORD','');
-define('DBNAME','app2022');
-define('BASE_URL','http://localhost:7000/');
+define('DBNAME','school');
+define('BASE_URL','http://localhost:8000/');
+// define('BASE_URL','http://localhost:786/APP2021/CRUD/web/');
 
 ################ All Constants ##########################
 
@@ -18,7 +19,7 @@ return [
 		'host'=>'localhost:3308',
 		'user'=>'root',
 		'password'=>'',
-		'dbname'=>'app2022',
+		'dbname'=>'school',
 	],
 	'db:debug' => true,
 

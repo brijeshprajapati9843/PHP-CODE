@@ -14,9 +14,9 @@ try{
 		$settings['db:config']['dbname'])
 		
 	){	
-		if ($settings['db:debug']==true) {
-			// print_r($conn);
-		}
+	if ($settings['db:debug']==true) {
+		// print_r($conn);
+	}
 	
 	}else{
 		throw new Exception();

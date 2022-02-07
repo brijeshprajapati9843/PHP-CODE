@@ -4,6 +4,7 @@
 include_once __DIR__.'/init.php'; 
 
 try{	
+	
 	mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
 	if(	$conn = mysqli_connect(
@@ -14,8 +15,10 @@ try{
 		$settings['db:config']['dbname'])
 		
 	){	
-		if ($settings['db:debug']==true) {
-			// print_r($conn);
+	
+		if( $settings['connection:debug']==true ){
+			print_r($conn);
+			exit;
 		}
 	
 	}else{
@@ -26,6 +29,7 @@ try{
 	echo $e->getMessage();
 	exit('DB Connection Failed '.mysqli_connect_error());
 }
+
 
 
 

@@ -1,0 +1,25 @@
+{
+	"collection":"student",
+	"Author":"Brijesh",
+	"date":"27-jan-2022",
+	"time":"10:02:00 AM",
+	"data":[
+		{
+			"name":"Brijesh kumar",
+			"roll_no":"1001",
+			"class":"Diploma"
+		},
+		{
+			"name":"ram kumar",
+			"roll_no":"1002",
+			"class":"Diploma"
+		},
+		{
+			"name":"ram kumar",
+			"roll_no":"1002",
+			"class":"Diploma"
+		}
+		
+		
+	]
+}	
