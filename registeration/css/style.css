@@ -1,0 +1,24 @@
+*
+{
+	font-family: 'Mulish', sans-serif;
+}
+
+.banner
+{
+	/*background-image: url('image/8.jpg');*/
+	/*background-size: cover;*/
+	background: linear-gradient(135deg,#8AF9D6,#C488F6);
+	min-height: 100vh;
+	width: 100%;
+}
+.divider-text
+{
+	border-bottom: 1px solid #D8D8D8;
+}
+.txt
+{
+	position: absolute;
+	background: #fff;
+	top: 200px;
+    padding: 5px;
+}
