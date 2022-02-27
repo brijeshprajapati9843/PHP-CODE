@@ -18,11 +18,11 @@ try{
 		
 		session_start();
 
-		// $_SESSION['name'] = $name;
+		$_SESSION['name'] = $name;
 		// $_SESSION['password'] = $password;
 
 		header("location:".url("index.php"));
-		echo "Welcome :- {$user->user}";
+		echo "Welcome :- {$name}";
 
 	}else
 	{

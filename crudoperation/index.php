@@ -3,8 +3,9 @@
 include_once __DIR__.'/functions.php';
 include_once __DIR__.'/Query-Bilder/updatequery.php';
 
-$query = new Query();
-$user = $query->select('user')->table('login')->first();
+error_reporting(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+// $query = new Query();
+// $user = $query->select('user')->table('login')->first();
 // print_r($user);
  ?>
 
@@ -36,7 +37,7 @@ $user = $query->select('user')->table('login')->first();
           <a class="nav-link active" aria-current="page" href="<?php echo url('logout.php'); ?>">Logout</a>
         </li>
       </ul>
-      <div class="msg"><?php echo "Welcome : - ". $user->user ?></div>
+      <div class="msg"><?php echo "Welcome : - ". $name ?></div>
     </div>
   </div>
 </nav>

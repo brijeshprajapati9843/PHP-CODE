@@ -1,0 +1,33 @@
+{
+"collection":"student",
+"Author":"Brijesh",
+"date":"27-jan-2022",
+"time":"10:02:00 AM",
+"data":[
+	{
+		"roll":"1001",
+		"name":"Brijesh",
+		"marks":"50",
+		"class":"diploma"
+	},
+	{
+		"roll":"1002",
+		"name":"Vikas",
+		"marks":"55",
+		"class":"betech"
+	},
+	{
+		"roll":"1003",
+		"name":"Shani",
+		"marks":"50",
+		"class":"diploma"
+	},
+	{
+		"roll":"1004",
+		"name":"Ritwik",
+		"marks":"50",
+		"class":"diploma"
+	}
+	
+]
+}

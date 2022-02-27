@@ -1,0 +1,3 @@
+RewriteEngine On
+#Option -Indexes
+php_value auto_prepend_file Bootstrap/app.php

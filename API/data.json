@@ -12,13 +12,24 @@
 		{
 			"name":"ram kumar",
 			"roll_no":"1002",
+			"class":"12th"
+		},
+		{
+			"name":"ram",
+			"roll_no":"1003",
+			"class":"D.pharma"
+		},
+		{
+			"name":"Ramesh",
+			"roll_no":"1004",
 			"class":"Diploma"
 		},
 		{
-			"name":"ram kumar",
-			"roll_no":"1002",
+			"name":"Dharemesh",
+			"roll_no":"1005",
 			"class":"Diploma"
 		}
+
 		
 		
 	]

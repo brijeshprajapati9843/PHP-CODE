@@ -34,6 +34,8 @@ echo "All Records \n";
 				<th>Email</th>
 				<th>Mobile</th>
 				<th>Class</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</tr>";
 if (mysqli_num_rows($result)>0) {
 	while ($row = mysqli_fetch_assoc($result)) {
@@ -42,6 +44,8 @@ if (mysqli_num_rows($result)>0) {
      <td>".$row['name']." </td>
      <td>".$row['email']." </td>
      <td>".$row['mobile']." </td>
+     <td>".$row['class']." </td>
+     <td><a href = 'edit.php'>Edit</a>".$row['id']." </td>
      <td>".$row['class']." </td>
 
      <tr>";

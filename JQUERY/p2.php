@@ -5,7 +5,7 @@
 <script> 
 $(document).ready(function(){
 
-  $("#flip").hover(function(){
+  $("#flip").click(function(){
     $("#panel").slideToggle("slow");
   });
    

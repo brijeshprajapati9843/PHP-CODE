@@ -23,7 +23,7 @@ public static function get_b(){ #static method
 echo PHP_EOL;
 echo  "The value from static context = ";
 echo Test::$b;
-//echo $this->b; #error due to $this Object Context for static context b
+// echo $this->b; #error due to $this Object Context for static context b
 
 
 }
