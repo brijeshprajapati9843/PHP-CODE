@@ -25,9 +25,34 @@
 	{
 		"roll":"1004",
 		"name":"Ritwik",
-		"marks":"50",
+		"marks":"55",
 		"class":"diploma"
+	},
+	{
+		"roll":"1005",
+		"name":"Mukesh",
+		"marks":"65",
+		"class":"12th"
+	},
+	{
+		"roll":"1006",
+		"name":"Ram",
+		"marks":"50",
+		"class":"D Pharam"
+	},
+	{
+		"roll":"1007",
+		"name":"Ramesh",
+		"marks":"60",
+		"class":"B.Tech"
+	},
+	{
+		"roll":"1008",
+		"name":"Ayush",
+		"marks":"40",
+		"class":"B.A"
 	}
+
 	
 ]
 }

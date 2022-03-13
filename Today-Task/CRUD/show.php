@@ -14,7 +14,7 @@ if (mysqli_num_rows($result)>0) {
 		<th>Mobile</th>
 		<th>Edit</th>
 		<th>Delete</th>
-	</tr>";
+	</tr>"; 
 	while ($rows = mysqli_fetch_assoc($result)) {
 		echo "<tr>
 			<td>".$rows['id']."</td>

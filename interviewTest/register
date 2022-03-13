@@ -1,0 +1,19 @@
+register.php
+
+first name
+last name
+email  (duplicate email not)
+phone  (must be 10 digit)
+pass
+confirm pass.  (must be match)
+image
+
+login.php
+email
+pass
+
+
+dashboard.php  
+
+
+hello <name><image>
